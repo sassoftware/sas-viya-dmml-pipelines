@@ -96,6 +96,7 @@
 	/*handle bins for missing values*/  
 	data &dm_casiocalib..binnedInData /* binnedData */;
 		set &dm_casiocalib..binnedInData;
+		if not(missing(&segvar.));
 		array binVars (&dm_num_interval_inputNoQ)
 			%do  i = 1 %to &dm_num_interval_inputNoQ;
 				&&binOutVar&i.
