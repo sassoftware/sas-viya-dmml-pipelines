@@ -17,9 +17,9 @@ Data Description: The data contains information about customer's default payment
 
 6. Under Pipelines, create a simple pipeline as shown below using Forest and Open Source Code nodes. After adding Open Source Code node, right-click and select Move >> Supervised Learning.
 
-(NOTE: If the data has missing values, consider adding Imputation node before Open Source Code node)
+(**NOTE:** If the data has missing values, consider adding Imputation node before Open Source Code node)
 
-![Simple Forest](sf_pipeline.png)
+![alt text](sf_pipeline.PNG "Simple Forest")
 
 7. Select first Open Source Code node, this builds randomForest in R:
    - Change "Language" property to R
@@ -37,7 +37,7 @@ Data Description: The data contains information about customer's default payment
    - Click Open button and copy code from sf_onehotvars_sklearn_randomforest.py into the code editor
    - Click Save and close the editor   
    
-(NOTE: You can rename the nodes to "R(randomForest)", "Py(RandomForestClassifier)" and "Py(onehotVars+RandomForestClassifier)" by right-clicking on the node and selecting Rename)
+(**NOTE:** You can rename the nodes to "R(randomForest)", "Py(RandomForestClassifier)" and "Py(onehotVars+RandomForestClassifier)" by right-clicking on the node and selecting Rename)
 
 9. Run the pipeline 
 
