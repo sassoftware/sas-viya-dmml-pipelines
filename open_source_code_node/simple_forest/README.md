@@ -45,7 +45,7 @@ Data Description: The data contains information about customer's default payment
 
 (NOTE: The forest models are built with 100 trees and defaults provided in respective software packages are used for other model parameters)
 
-Other Resources:
+### Additional Resources:
 - [Executing Open Source Code in SAS Visual Data Mining & Machine Learning Pipelines (video)](https://youtu.be/VSryf7qJi1g)
 - [Open Source Code node documentation](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.3&docsetId=vdmmlref&docsetTarget=n0gn2o41lgv4exn17lngd558jcso.htm&locale=en)
 - [SAS Visual Data Mining and Machine Learning 8.3: User's Guide](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.3&docsetId=vdmmlug&docsetTarget=titlepage.htm&locale=en)
