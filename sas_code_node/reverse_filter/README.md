@@ -1,3 +1,3 @@
-This example SAS code reverses the filter from the Anomaly Detection node so that the outliers are kept and non-outliers excluded instead of excluding ouitliers.  Score code is generated that reverses this filter, then the metadata is modified to use this new variable as the Filter variable.  
+This example SAS code reverses the filter from the Anomaly Detection node so that the outliers are kept and non-outliers excluded instead of excluding outliers.  Score code is generated that reverses this filter, then the metadata is modified to use this new variable as the Filter variable.  
 
 Instructions: In Model Studio, after an Anomaly Detection node where the "Anomaly indicator role" has been set to "Input", add a SAS Code node to your pipeline, then open it and paste this code into the code editor, then save and close the node.  Nodes added to this SAS Code node will use reversed filter, that is will only train on the outliers identified by the Anomaly Detection node.
