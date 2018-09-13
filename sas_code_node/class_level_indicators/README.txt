@@ -4,4 +4,4 @@ The class level indicator variable names are derived as <ClassVariableName>_<Cla
 
 See the comments at the top of the SAS code for macro variables you can change as desired.  
 
-Instructions: In Model Studio, add a Code node to your pipeline, then open it and paste this code into the code editor, then save and close the node.  Nodes added to this Code node will use the class level indicators as interval inputs (by default) in place of the original class inputs.
+Instructions: In Model Studio, add a SAS Code node to your pipeline, then open it and paste this code into the code editor, then save and close the node.  Nodes added to this SAS Code node will use the class level indicators as interval inputs (by default) in place of the original class inputs.
