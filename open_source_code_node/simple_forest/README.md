@@ -43,4 +43,4 @@ Data Description: The data contains information about customer's default payment
 
 10. From Model Comparison node, right-click and select Results to view comparison of forest models from SAS, Python and R.
 
-(NOTE: The forest models are built with 100 trees and defaults provided in respective software packages are used for other model parameters)
+(**NOTE:** The forest models are built with 100 trees and defaults provided in respective software packages are used for other model parameters)
