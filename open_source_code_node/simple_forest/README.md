@@ -44,8 +44,3 @@ Data Description: The data contains information about customer's default payment
 10. From Model Comparison node, right-click and select Results to view comparison of forest models from SAS, Python and R.
 
 (NOTE: The forest models are built with 100 trees and defaults provided in respective software packages are used for other model parameters)
-
-### Additional resources
-- [Executing Open Source Code in SAS Visual Data Mining & Machine Learning Pipelines (video)](https://youtu.be/VSryf7qJi1g)
-- [SAS Visual Data Mining and Machine Learning 8.3 User's Guide Reference Help: Open Source Code node](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.3&docsetId=vdmmlref&docsetTarget=n0gn2o41lgv4exn17lngd558jcso.htm&locale=en)
-- [SAS Visual Data Mining and Machine Learning 8.3 User's Guide](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.3&docsetId=vdmmlug&docsetTarget=titlepage.htm&locale=en)
