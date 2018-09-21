@@ -1,2 +1,4 @@
 ## Summary
 The **proc_samples** folder contains sample code that shows how to run SAS procedures and CAS actions.
+
+The SAS Code node needs to be moved to Supervised Learning group when building a predictive model. This step is required when the model needs to be assessed and compared with other models (using Model Comparison node) in the pipeline. The model score code needs to be written to a file referenced by **dm_file_scorecode** macro variable if it generates the data step code or to **dm_data_rstore** macro variable if it generates an astore (or analytic store). See proc_logselect.sas and proc_gradboost.sas for examples.

@@ -14,6 +14,7 @@ Below are the list of examples; they are listed in the order of increasing compl
 
 ### Important Notes
 - The exported data that is produced by a successful SAS Code node run can be used by subsequent nodes in a pipeline when the corresponding score code is written to a file referenced by **dm_file_scorecode** macro variable. See subset_data, reverse_filter and others for examples.
+- The SAS Code node needs to be moved to Supervised Learning group when building a predictive model. This step is required when the model needs to be assessed and compared with other models (using Model Comparison node) in the pipeline. As mentioned earlier, the model score code needs to be written to a file referenced by **dm_file_scorecode** macro variable if it generates the data step code or to **dm_data_rstore** macro variable if it generates an astore (or analytic store). See proc_samples/proc_logselect.sas and proc_samples/proc_gradboost.sas for examples.
 - The **dmcas_metaChange** macro can be used to modify the metadata (like variable roles and levels) in the SAS Code node. See subset_data and reverse_filter for examples.
 - The **dmcas_report** macro can be used to add reports to the SAS Code node results. See examples in proc_samples.
 
