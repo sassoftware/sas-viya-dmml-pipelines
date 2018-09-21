@@ -12,10 +12,10 @@ Below are the list of examples; they are listed in the order of increasing compl
 - **cluster_profiling:** Profiling clusters or segments created in a predecessor Clustering node
 - **class_level_indicators:** Creating class level indicators also called one-hot or dummy encoding for class/categorical inputs
 
-**Important Notes:** 
+### Important Notes
 - The exported data that is produced by a successful SAS Code node run can be used by subsequent nodes in a pipeline when the corresponding score code is written to a file referenced by **dm_file_scorecode** macro variable. See subset_data, reverse_filter and others for examples.
-- The dmcas_metaChange macro can be used to modify the metadata (like variable roles and levels) in the SAS Code node. See subset_data, reverse_filter for examples.
-- The dmcas_report macro can be used to add reports to SAS Code node results. See examples in proc_samples.
+- The **dmcas_metaChange** macro can be used to modify the metadata (like variable roles and levels) in the SAS Code node. See subset_data, reverse_filter for examples.
+- The **dmcas_report** macro can be used to add reports to SAS Code node results. See examples in proc_samples.
 
 ### Additional resources
 - [SAS Visual Data Mining and Machine Learning 8.3 User's Guide Reference Help: SAS Code node](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.3&docsetId=vdmmlref&docsetTarget=n1tel4vhrsqnorn14imelpnu7a87.htm&locale=en)
