@@ -1,18 +1,4 @@
-/*-------------------------------------------------------------------------*/
-/* Copyright (c) 2017 by SAS Institute Inc., Cary, NC USA 27513            */
-/* NAME:       Basic profiler (test code)                                  */
-/* SUPPORT:    Ray Wright (ray.wright@sas.com)                             */
-/* Created:    6/1/2017                                                    */
-/* TYPE:       Portable                                                    */
-/* PURPOSE:    profile clusters                                            */
-/* Changes:                                                                */
-/*-------------------------------------------------------------------------*/
-
-
 %macro dmcas_basicProfile();
-
-
-
 
         /*get unquoted variable lists for CAS action call.*/
         
@@ -148,11 +134,6 @@
 
 	run;
 
-
-
-/*weird bug: col1 is not properly labeled for character segment var.
-other cols look fine. this messes up chart 
-label is like 'abulation of BIN_CLAGE by JOB for BINNEDINDATA.' */
 
 		%do i = 1 %to &dm_num_class_binned.;
 		  saveresult xTabs&i. replace dataset=crosstabs&i.; 		                                                     
