@@ -6,17 +6,18 @@ In Model Studio, the SAS Code node is a Miscellaneous node that enables you to i
 
 Below are the list of examples; they are listed in the order of increasing complexity:
 1. **subset_data:** Subsetting or filtering data 
-2. **reverse_filter:** Reversing the outlier filter created by the Anomaly Detection node so that outliers are analyzed instead of being excluded
-3. **log_transform_for_skewed_inputs:** Setting the transformation for skewed variables to Log in the metadata, to be used by a subsequent Transformations node
-4. **proc_samples:** Sample code that shows how to run SAS procedures and CAS actions
-5. **cluster_profiling:** Profiling clusters or segments created in a predecessor Clustering node
-6. **class_level_indicators:** Creating class level indicators also called one-hot or dummy encoding for class/categorical inputs
+2. **plot_samples:** Creating plots using the %dmcas_report macro
+3. **reverse_filter:** Reversing the outlier filter created by the Anomaly Detection node so that outliers are analyzed instead of being excluded
+4. **log_transform_for_skewed_inputs:** Setting the transformation for skewed variables to Log in the metadata, to be used by a subsequent Transformations node
+5. **proc_samples:** Sample code that shows how to run SAS procedures and CAS actions
+6. **cluster_profiling:** Profiling clusters or segments created in a predecessor Clustering node
+7. **class_level_indicators:** Creating class level indicators also called one-hot or dummy encoding for class/categorical inputs
 
 ### Important Notes
 - The exported data that is produced by a successful SAS Code node run can be used by subsequent nodes in a pipeline when the corresponding score code is written to a file referenced by **dm_file_scorecode** macro variable. See subset_data, reverse_filter and others for examples.
 - The SAS Code node needs to be moved to Supervised Learning group when building a predictive model. This step is required when the model needs to be assessed and compared with other models (using Model Comparison node) in the pipeline. As mentioned earlier, the model score code needs to be written to a file referenced by **dm_file_scorecode** macro variable if it generates the data step code or to **dm_data_rstore** macro variable if it generates an astore (or analytic store). See proc_samples/proc_logselect.sas and proc_samples/proc_gradboost.sas for examples.
 - The **dmcas_metaChange** macro can be used to modify the metadata (like variable roles and levels) in the SAS Code node. See subset_data and reverse_filter for examples.
-- The **dmcas_report** macro can be used to add reports to the SAS Code node results. See examples in proc_samples and cluster_profiling.
+- The **dmcas_report** macro can be used to add reports to the SAS Code node results. See examples in plot_samples, proc_samples, and cluster_profiling.
 
 ### Additional resources
 - [SAS Visual Data Mining and Machine Learning 8.3 User's Guide Reference Help: SAS Code node](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.3&docsetId=vdmmlref&docsetTarget=n1tel4vhrsqnorn14imelpnu7a87.htm&locale=en)
