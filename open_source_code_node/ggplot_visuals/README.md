@@ -1,6 +1,8 @@
 ## Visualization using ggplot2 and rpart.plot packages in R
 
-Data: [Cars](https://github.com/sassoftware/sas-viya-programming/blob/master/data/cars.csv)
+Data: [Cars data set](https://github.com/sassoftware/sas-viya-programming/blob/master/data/cars.csv)
+
+**Note that this example requires pre-installation of rpart, rpart.plot and ggplot2 packages in R** 
 
 ### Steps to run this example
 1. Download "cars.csv" from the link above.
@@ -13,7 +15,7 @@ Data: [Cars](https://github.com/sassoftware/sas-viya-programming/blob/master/dat
 
 5. Select the Open Source Code node and 
    - Change "Language" property to R.
-   - Click Open or Open Code Editor button and copy code from gg_plots.r into the code editor
+   - Click "Open" or "Open Code Editor" button and copy code from gg_plots.r into the code editor
    - Click Save and close the editor
 
 6. Run the pipeline
