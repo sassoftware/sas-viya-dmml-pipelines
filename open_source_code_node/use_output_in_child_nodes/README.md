@@ -2,6 +2,8 @@
 
 This example shows how the output data generated in Open Source Code node can be used in subsequent child modeling nodes. **It runs on VDMML 8.5 or later releases.** In VDMML 8.5, a new property was added to Open Source Code node called "Use output data in child nodes" that saves a copy of the output data so as to enable its use in subsequent child nodes. Every time this property is set, a copy of the output data will be saved in the Model Studio project library. When setting this property, make sure NOT to modify the target or the partition variable (if one exists) as that affects model assessment and comparison in Model Comparison node.
 
+When writing code in Open Source Code node editor, note that dm_scoreddf should contain the output data. Also, whenever Open Source Code node is added to a pipeline, the capabilities like download score code or score API, register or publish models and score holdout data will not be enabled or work as there is no underlying SAS score code for this node.
+
 Data: [HMEQ data](https://github.com/sassoftware/sas-viya-dmml-pipelines/tree/master/data/hmeq.csv)
 
 Data Description: The data contains observations for 5,960 mortgage applicants. The variable BAD indicates whether the customer has paid on the loan (0) or has defaulted on it (1).
