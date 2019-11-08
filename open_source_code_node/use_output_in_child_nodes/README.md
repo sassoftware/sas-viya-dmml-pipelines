@@ -1,6 +1,6 @@
 ## Use output data in child nodes
 
-This example shows how to use the output data generated in Open Source Code node in subsequent child modeling nodes. **It runs on VDMML 8.5 or later releases.** In VDMML 8.5, there is a new property in Open Source Code node called "Use output data in child nodes" that saves a copy of the output data so as to enable its use in subsequent child nodes. Every time this property is set, a copy of the output data will be saved in the Model Studio project library. When setting this property, make sure NOT to modify the target or the partition variable (if one exists) as that affects model assessment and comparison in Model Comparison node.
+This example shows how the output data generated in Open Source Code node can be used in subsequent child modeling nodes. **It runs on VDMML 8.5 or later releases.** In VDMML 8.5, a new property was added to Open Source Code node called "Use output data in child nodes" that saves a copy of the output data so as to enable its use in subsequent child nodes. Every time this property is set, a copy of the output data will be saved in the Model Studio project library. When setting this property, make sure NOT to modify the target or the partition variable (if one exists) as that affects model assessment and comparison in Model Comparison node.
 
 Data: [HMEQ data](https://github.com/sassoftware/sas-viya-dmml-pipelines/tree/master/data/hmeq.csv)
 
@@ -14,7 +14,7 @@ Data Description: The data contains observations for 5,960 mortgage applicants. 
 
 3. Under Data tab, select BAD as target variable.
 
-4. Under Pipelines, create a simple pipeline as shown below using Imputation, Open Source Code, Forest and Gradient Boosting nodes. The Data Exploration node was added to see which variable deviates from normality the most and log transform that variable before modeling.
+4. Under Pipelines, create a simple pipeline as shown below using Imputation, Open Source Code, Forest and Gradient Boosting nodes. The Data Exploration node was added to see which variable deviates from normality the most and log-transform that variable before modeling.
 
 (**NOTE:** Since HMEQ data has missing values, an Imputation node was added before Open Source Code node)
 
