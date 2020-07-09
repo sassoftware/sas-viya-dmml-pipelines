@@ -1,4 +1,4 @@
-The **plot_samples** folder contains sample code that shows how to create plots in a SAS Code node using the %dmcas_report macro.
+The **plot_samples** folder contains sample code that shows how to create plots in a SAS Code node using the %dmcas_report macro.  This code is entered into the Training Code pane of the SAS Code node.
 
 - **genericData.sas** uses a generic data set to demonstrate the different arguments you can use in %dmcas_report to create various plot types: a series plot, bar chart, pie chart, and band plot.
 
