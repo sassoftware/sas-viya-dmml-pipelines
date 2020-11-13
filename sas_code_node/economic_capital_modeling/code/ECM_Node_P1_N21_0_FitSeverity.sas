@@ -1,16 +1,9 @@
-/*
-%let ecm_user_sevdists       	= gamma logn weibull;
-%let ecm_user_sevDistSlctCrit	= aicc;
-%let ecm_user_sevEffects     	= %str(corpKRI1 corpKRI2 cbKRI2 rbKRI1 rbKRI3 corpKRI1*rbKRI3);
-%let ecm_user_sevSlctMethod  	= %str();
-%let ecm_user_sevEffectSlctCrit	= sbc;
-*/
-
 /*** Read global macro variables ***/
 %dmcas_fetchDataset(&dm_projectId, &dm_nodedir, ecm_tmp_macrovars);
 
-proc print data=&dm_lib..ecm_tmp_macrovars;
-run;
+/*
+proc print data=&dm_lib..ecm_tmp_macrovars; run;
+*/
 
 data _null_;
 	set &dm_lib..ecm_tmp_macrovars;
@@ -48,11 +41,12 @@ quit;
 
 %dmcas_register(dataset=&dm_lib..fitStatsSev);
 
+/*
 proc print data=&dm_lib..DMCAS_REGISTER;
 run;
-
 proc print data=&dm_lib..ecm_tmp_macrovars;
 run;
+*/
 
 proc print data=&dm_lib..fitStatsSev;
 run;

@@ -1,8 +1,3 @@
-/*
-%let ecm_user_copModels       = %str(t gumbel clayton);
-%let ecm_user_copModelSlctCrit= AIC;
-*/
-
 /*** Read global macro variables ***/
 %dmcas_fetchDataset(&dm_projectId, &dm_nodedir, ecm_tmp_macrovars);
 

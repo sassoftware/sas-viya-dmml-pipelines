@@ -30,8 +30,10 @@
  *-----------------------------------------------------*/
 %let ecm_user_copModels         = t gumbel clayton;
 %let ecm_user_copModelSlctCrit  = AIC;
-%let ecm_user_nCopObs           = 10000;
-%let ecm_user_copSeed           = 123;
+
+/* You can override the following two settings later in 'Simulate Copula' node. */
+%let ecm_user_nCopObs           = 5000000; 
+%let ecm_user_copSeed           = 123; 
 
 /****************** END USER SETTINGS ******************/
 

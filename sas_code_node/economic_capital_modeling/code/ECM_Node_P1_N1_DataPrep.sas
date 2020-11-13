@@ -1,6 +1,4 @@
 /*** Read user settings ***/
-proc print data=work.NODES; run;
-
 data _null_;
 	set work.nodes(where=(component="sascode" and order=1));
 	call symput("settingsNodeGuid", guid);
@@ -10,8 +8,10 @@ run;
 
 %dmcas_fetchDataset(&settingsNodeGuid, &dm_nodedir, ecm_user_settings);
 
-proc print data=&dm_lib..ecm_user_settings;
-run;
+/*
+proc print data=work.NODES; run;
+proc print data=&dm_lib..ecm_user_settings; run;
+*/
 
 data _null_;
 	set &dm_lib..ecm_user_settings;
@@ -29,8 +29,6 @@ proc print data=&dm_metadata; run;
 %put =============== All Macros ================;
 %put _all_;
 */
-
-proc print data=work.NODES; run;
 
 %let debugThis = 1;
 
@@ -115,21 +113,7 @@ proc print data=work.NODES; run;
 	%put time id: &local_timeid;
 %end;
 
-%local dsopt;
-/* 
-*** Use of this would be required if there was no loss value variable,
-    because TSMODEL doesn't allow same variable to be accumulated different
-    ways.;
-data _null_;
-   file "./temppgm.sas";
-   put "if (&ecm_sev_target ne .) then &ecm_freq_target=1; else &ecm_freq_target=0;";
-;
-filename temppgm "./temppgm.sas";
-%let dsopt=%str(tempnames=(&ecm_freq_target) tempexpress=temppgm);
-*/
-%let dsopt=%str();
- 
-proc tsmodel data=&dm_data(&dsopt) 
+proc tsmodel data=&dm_data
 			 out=&dm_datalib.._tmp_ecm_aggcount;
 	by &ecm_byvars;
 	id &local_timeid interval=&ecm_user_periodOfInterest accumulate=avg setmiss=0;
@@ -221,32 +205,6 @@ quit;
 
 
 /*** Prepare a table of project-wide, internal macro variable values ***/
-/*
-%local globalVars;
-%let globalVars=%str(
-ecm_countTable
-ecm_matchedLossTable
-ecm_sev_target
-ecm_freq_target
-ecm_classInput
-ecm_nbyvars ecm_byvars ecm_nByGrp ecm_lastByVar
-ecm_ByGrpInfoDS
-);
-data work.ecm_tmp_macrovars;
-	length name varchar(32) value varchar(*);
-	%let i=1;
-	%local name;
-	%do %until ("&name" eq "");
-		%let name = %scan(&globalVars, &i, " ");
-		%if ("&name" ne "") %then %do;
-			name = "&name";
-			value = "%bquote(&&&name)";
-			output;
-			%let i = %eval(&i + 1);
-		%end;
-	%end;
-run;
-*/
 proc sql noprint ;
 	create table ecm_tmp_macrovars as 
 		select name, value from dictionary.macros 

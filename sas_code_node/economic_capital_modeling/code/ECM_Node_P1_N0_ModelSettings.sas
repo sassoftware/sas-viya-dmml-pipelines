@@ -30,6 +30,8 @@
  *-----------------------------------------------------*/
 %let ecm_user_copModels         = <space-separated list of copula types [example: t gumbel clayton]>;
 %let ecm_user_copModelSlctCrit  = <copula selection criterion, such as aic, etc>;
+
+/* You can override the following two settings later in 'Simulate Copula' node. */
 %let ecm_user_nCopObs           = <number of observations to simulate multivariate uniform sample from the best copula; larger number is better, but results in longer simulation time>;
 %let ecm_user_copSeed           = 123; /* seed to use for copula simulation for reproducibility of results */
 

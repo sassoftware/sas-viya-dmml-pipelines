@@ -15,7 +15,6 @@ run;
 /* data set name must be all lower-case */
 %dmcas_fetchDataset(&fitcopNodeGuid, &dm_nodedir, fitstatscop);
 
-
 data _null_;
 	set &dm_lib..fitStatsCop end=last;
 	retain best_crit best_model best_store;
@@ -51,6 +50,9 @@ data &dm_lib..ecm_tmp_macrovars;
 		output;
 	end;
 	else output;
+run;
+
+proc print data=&dm_lib..ecm_tmp_macrovars(where=(name like 'ecm_best_copula%')); 
 run;
 
 %dmcas_register(dataset=&dm_lib..ecm_tmp_macrovars);

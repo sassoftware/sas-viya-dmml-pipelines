@@ -1,9 +1,3 @@
-/*
-%let ecm_user_edfAccuracy = 5.0e-3;
-%let ecm_user_varLevels = %str(50, 90, 95, 97.5, 99, 99.5);
-%let ecm_user_tvarLevels = %str(90, 95, 97.5, 99, 99.5);
-*/
-
 /*** Get macro variables ***/
 %dmcas_fetchDataset(&dm_projectId, &dm_nodedir, ecm_tmp_macrovars);
 data _null_;
@@ -92,13 +86,14 @@ run;
 				%let drawId&igrp = 0;
 			%end;
 			%else %do;
-				%goto gotNextCombo;
+				%goto nextCombo;
 			%end;
 		%end;
-		%gotNextCombo:
+		%nextCombo:
 	    ;
 	%end;
 
+    title "Final ECM Estimates of All Marginal Combinations";
     proc print data=&dm_lib..allecmstats; run;
     
 	title 'Location and Dispersion Estimates of Risk Measures';
@@ -110,4 +105,3 @@ run;
 
 %exit:
 ;
-

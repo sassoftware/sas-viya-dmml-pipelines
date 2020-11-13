@@ -1,8 +1,7 @@
 /*** Read global macro variables ***/
 %dmcas_fetchDataset(&dm_projectId, &dm_nodedir, ecm_tmp_macrovars);
 
-proc print data=&dm_lib..ecm_tmp_macrovars;
-run;
+/* proc print data=&dm_lib..ecm_tmp_macrovars; run; */
 
 data _null_;
 	set &dm_lib..ecm_tmp_macrovars;
@@ -11,7 +10,7 @@ run;
 
 /* the data set name must be all lowercase during fetch because that is 
    how %dmcas_register saves it */
-proc print data=work.NODES; run;
+/* proc print data=work.NODES; run; */
 
 data _null_;
 	set work.nodes(where=(component="sascode" and order=3));

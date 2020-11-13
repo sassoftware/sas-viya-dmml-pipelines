@@ -5,8 +5,8 @@
  *-----------------------------------------------------*/
 %let ecm_user_scenarioCASLIB    = Public;
 %let ecm_user_scenarioTable     = opriskscenario1;
-%let ecm_user_cdmNRep           = 10000;
-%let ecm_user_nTotalLossSamples = 10;
+%let ecm_user_cdmNRep           = 100000;
+%let ecm_user_nTotalLossSamples = 50;
 %let ecm_user_cdmSeed           = 345;
 
 /*-----------------------------------------------------*

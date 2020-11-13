@@ -1,11 +1,3 @@
-/*
-%let ecm_user_cntDists       = %str(poisson negbin(p=2));
-%let ecm_user_cntDistSlctCrit= AIC;
-%let ecm_user_cntEffects     = %str(corpKRI1 corpKRI2 cbKRI1 cbKRI2 cbKRI3 cbKRI2*cbKRI3 rbKRI1 rbKRI2);
-%let ecm_user_cntSlctMethod  = %str();
-%let ecm_user_cntSlctCrit    = sbc;
-*/
-
 /*** Read global macro variables ***/
 %dmcas_fetchDataset(&dm_projectId, &dm_nodedir, ecm_tmp_macrovars);
 

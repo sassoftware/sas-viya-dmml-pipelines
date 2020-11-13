@@ -55,7 +55,7 @@ The Modeling pipeline should look as shown in the image below:
 ![Modeling Pipeline](images/Pipeline1.PNG)
 
 The Simulation pipeline should look as shown in the image below:
-![Modeling Pipeline](images/Pipeline2.PNG)
+![Simulation Pipeline](images/Pipeline2.PNG)
 
 Note that you can use different names for nodes and pipelines; the preceding names are chosen
 to describe the function of each node and pipeline.

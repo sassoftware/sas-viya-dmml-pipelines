@@ -1,14 +1,4 @@
-/*
-%let ecm_user_scenarioCASLIB=CASUSER(majosh);
-%let ecm_user_scenarioTable=opriskscenario1;
-%let ecm_user_cdmNRep = 10000;
-%let ecm_user_cdmSeed = 345;
-%let ecm_user_nTotalLossSamples = 10;
-*/
-
 /*** Read user simulation settings ***/
-proc print data=work.NODES; run;
-
 data _null_;
     set work.nodes(where=(component="sascode" and order=1));
     call symput("simSettingsNodeGuid", guid);
@@ -18,8 +8,7 @@ run;
 
 %dmcas_fetchDataset(&simSettingsNodeGuid, &dm_nodedir, ecm_user_sim_settings);
 
-proc print data=&dm_lib..ecm_user_sim_settings;
-run;
+/* proc print data=&dm_lib..ecm_user_sim_settings; run; */
 
 data _null_;
     set &dm_lib..ecm_user_sim_settings;
@@ -28,10 +17,7 @@ run;
 
 /*** Read project-wide macros created by the modeling pipeline (P1) ***/
 %dmcas_fetchDataset(&dm_projectId, &dm_nodedir, ecm_tmp_macrovars);
-/*
-proc print data=&dm_lib..ecm_tmp_macrovars;
-run;
-*/
+/* proc print data=&dm_lib..ecm_tmp_macrovars; run; */
 data _null_;
     set &dm_lib..ecm_tmp_macrovars;
     call symput(trim(name), trim(value));
@@ -49,10 +35,7 @@ run;
 %let byinfods = &ecm_ByGrpInfoDS;
 %put by info ds = &byinfods;
 %dmcas_fetchDataset(&dm_projectId, &dm_nodedir, &byinfods);
-/*
-proc print data=&dm_lib..&byinfods;
-run;
-*/
+/* proc print data=&dm_lib..&byinfods; run; */
 
 %dmcas_fetchDataSet(&dm_projectId, &dm_nodedir, ecm_prepsevguid);
 data _null_;
