@@ -12,7 +12,8 @@ Below are the list of examples; they are listed in the order of increasing compl
 5. **proc_samples:** Sample code that shows how to run SAS procedures and CAS actions
 6. **cluster_profiling:** Profiling clusters or segments created in a predecessor Clustering node
 7. **class_level_indicators:** Creating class level indicators also called one-hot or dummy encoding for class/categorical inputs
-8. **economic_capital_modeling:** This is an atypical example of implementing a generic workflow consisting of only SAS Code nodes, which estimate and simulate various econometrics models to solve the problem of economic capital modeling
+8. **access_data_from_predecessor:** Accessing registered data from the previous node.
+9. **economic_capital_modeling:** This is an atypical example of implementing a generic workflow consisting of only SAS Code nodes, which estimate and simulate various econometrics models to solve the problem of economic capital modeling
 
 ### Important Notes
 - The exported data that is produced by a successful SAS Code node run can be used by subsequent nodes in a pipeline when the corresponding score code is written to a file referenced by the **dm_file_scorecode** macro variable in the Training Code pane, or the score code is entered into the Scoring Code pane. See subset_data, reverse_filter and others for examples.
