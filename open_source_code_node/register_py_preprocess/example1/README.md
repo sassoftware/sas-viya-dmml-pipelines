@@ -1,8 +1,8 @@
-## example1: Register a pipeline with Imputation node (SAS score code) followed by Python model (Python score code)
+## example1: Register a pipeline with imputation in Python (Python score code) followed by Forest node (SAS analytic store binary)
 
-This example shows how to register a pipeline that has a mixture of SAS and Python score code. The pipeline has the form Data >> Imputation >> Open Source Code >> Model Comparison.
+This example shows how to register a pipeline that has a mixture of SAS and Python score code. The pipeline has the form Data >> Open Source Code >> Forest >> Model Comparison.
 
-**This functionality is available from Viya 4 2021.1.3 release.**
+**This functionality is available from Viya 4 2021.1.4 release.**
 
 Data: [HMEQ data](https://github.com/sassoftware/sas-viya-dmml-pipelines/tree/master/data/hmeq.csv)
 
@@ -22,9 +22,11 @@ Data Description: The data contains observations for 5,960 mortgage applicants. 
 
 3. Under Data tab, select BAD as target variable.
 
-4. Under Pipelines tab, create a simple pipeline with nodes: **Data >> Imputation >> Open Source Code >> Model Comparison** (you need to move the Open Source Code node to Supervised Learning lane).
+4. Under Pipelines tab, create a simple pipeline with nodes: **Data >> Open Source Code >> Forest >> Model Comparison**.
 
-5. Select Open Source Code node and click Open Code Editor button from properties. Copy code from hmeq_train.py into the **Training Code** pane and hmeq_score.py into the **Scoring Code** pane of the editor. Click Save and close the editor.
+5. Select Open Source Code node and
+   - Click **Use output data in child node** property checkbox.
+   - Click Open Code Editor button from properties. Copy code from hmeq_train.py into the **Training Code** pane and hmeq_score.py into the **Scoring Code** pane of the editor. Click Save and close the editor.
 
 6. Run the pipeline and right-click and select Results to view output
 
