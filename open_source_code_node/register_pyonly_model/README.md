@@ -2,7 +2,7 @@
 
 This example shows how to register a model that has Python score code within the Open Source Code node. The pipeline has the form Data >> Open Source Code >> Model Comparison where the score code includes only Python code.
 
-**This functionality is available from Viya 4 2020.1.3 release.**
+**This functionality is available from Viya 4 2020.1.1 release.**
 
 Data: [HMEQ data](https://github.com/sassoftware/sas-viya-dmml-pipelines/tree/master/data/hmeq.csv)
 
