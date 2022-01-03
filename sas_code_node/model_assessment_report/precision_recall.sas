@@ -20,7 +20,7 @@ proc assess data=&dm_data;
   target &dm_dec_target / level=nominal event="&predvar_evt_level";
   fitstat pvar=&predvar_nonevt / pevent="&predvar_nonevt_level";
   by &dm_partitionvar;
-  ods output rocinfo=&dm_lib.._rocinfo 
+  ods output rocinfo=&dm_lib.._rocinfo;
 run;
 
 data &dm_lib.._rocinfo;
