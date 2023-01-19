@@ -1,6 +1,6 @@
 ## Summary
 
-One of the most exciting new features in SAS Visual Data Mining and Machine Learning 8.5 is the option to automatically generate the pipeline. This combines the automation concepts (mentioned below) to dynamically create the optimal pipeline for your data. 
+One of the most exciting features in SAS Viya is the option to automatically generate the pipeline. This combines the automation concepts (mentioned below) to dynamically create the optimal pipeline for your data. 
 - applying the Best transformation method to interval inputs
 - binning and/or encoding variables to create new features 
 - imputing and/or creating missing value indicators 
