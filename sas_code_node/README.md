@@ -22,4 +22,4 @@ Below are the list of examples; they are listed in the order of increasing compl
 - The **dmcas_report** macro can be used to add reports to the SAS Code node results. See examples in plot_samples, proc_samples, and cluster_profiling.
 
 ### Additional resources
-- [SAS Visual Data Mining and Machine Learning 8.5 User's Guide Reference Help: SAS Code node](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.5&docsetId=vdmmlref&docsetTarget=n0k0fj96e81iton142bnbqg0igiv.htm&locale=en)
+- [SAS Viya: Machine Learning Reference Help: SAS Code node](https://https://go.documentation.sas.com/doc/en/capcdc/v_018/vdmmlcdc/vdmmlref/n0k0fj96e81iton142bnbqg0igiv.htm)
