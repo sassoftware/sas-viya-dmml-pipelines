@@ -32,5 +32,5 @@ Samples of the score code are available in hmeq_score.py file in register_pyonly
 
 
 ### Additional resources
-- [Executing Open Source Code in SAS Visual Data Mining & Machine Learning Pipelines (video)](https://youtu.be/VSryf7qJi1g)
-- [SAS Visual Data Mining and Machine Learning 8.5 User's Guide Reference Help: Open Source Code node](https://go.documentation.sas.com/?cdcId=vdmmlcdc&cdcVersion=8.5&docsetId=vdmmlref&docsetTarget=n0gn2o41lgv4exn17lngd558jcso.htm&locale=en)
+- [Executing Open Source Code in SAS Viya: Machine Learning Pipelines (video)](https://youtu.be/VSryf7qJi1g)
+- [SAS Viya: Machine Learning Reference Help: Open Source Code node](https://go.documentation.sas.com/doc/en/capcdc/v_018/vdmmlcdc/vdmmlref/n0t0jq9em0n5k3n1b6qxldxpqa86.htm)
