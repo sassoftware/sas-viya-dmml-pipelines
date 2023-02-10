@@ -13,12 +13,12 @@
 
 proc cas;
   decisiontree.gbtreetrain result=rslt /
-    table     ={name="&dm_memname.", where="&dm_partitionvar=&dm_partition_train_val", &dm_data_caslib}
+    table     ={name="&dm_memname.", where="&dm_partitionvar=&dm_partition_train_val", caslib="&dm_data_caslib."}
     inputs    ={%dm_interval_inputq, %dm_class_inputq}
     nominals  ={%dm_class_inputq, %dm_targetq} /* target is categorical */
     target    =%dm_targetq
     varimp    =true
-    savestate ={name="&dm_rstoreTable.", replace=true, &dm_data_caslib}
+    savestate ={name="&dm_rstoreTable.", replace=true, caslib="&dm_data_caslib."}
   ;
 run;
 /* Print results from gbtreetrain to ODS Output window */
