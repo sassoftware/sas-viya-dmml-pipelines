@@ -68,7 +68,11 @@ print(', '.join(dm_input))
 # Results
 #----------
 # Save VariableImportance to CSV
-full_input_vars = dm_interval_input + list(class_ohe.get_feature_names())
+# Use try-except to support deprecated method in scikit-learn version >1.2
+try:
+    full_input_vars = dm_interval_input + list(class_ohe.get_feature_names())
+except AttributeError:
+    full_input_vars = dm_interval_input + list(class_ohe.get_feature_names_out())
 varimp = pd.DataFrame(list(zip(full_input_vars, dm_model.feature_importances_)), columns=['Variable Name', 'Importance'])
 varimp.to_csv(dm_nodedir + '/rpt_var_imp.csv', index=False)
 
