@@ -80,6 +80,4 @@ varimp.to_csv(dm_nodedir + '/rpt_var_imp.csv', index=False)
 # Build composite pickle file
 #----------
 with open(dm_pklpath, 'wb') as f:
-    pickle.dump(intv_imputer, f)
-    pickle.dump(class_ohe, f)
-    pickle.dump(dm_model, f)
+    pickle.dump((intv_imputer, class_ohe, dm_model), f)
